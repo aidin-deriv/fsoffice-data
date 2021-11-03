@@ -1,27 +1,33 @@
 <template>
   <div class="grid-container">
     <div class="container">
-  
       <div
-          v-for="(feature, key) in $frontmatter.features" :key="key">
-        <div class="feature-item" v-show="!feature.canceled">
-          
-          <img :src="feature.image" />
+          v-for="(feature, key) in items" :key="key" class="feature-item">
+          <img :src="feature.image" :alt="feature.per_month" />
           <div class="action">
             <a :href="feature.link">
               {{ feature.title }} -
               <strong class="currency">{{ feature.per_month }} USD</strong>
             </a>
           </div>
-        </div>
-
       </div>
     </div>
   </div>
 </template>
 
 
-<style lang="css">
+<script>
+export default {
+  computed: {
+    items() {
+      return this.$root.$frontmatter.features.filter(f => !f.canceled)
+    }
+  }
+}
+
+</script>
+
+<style lang="css" scoped>
 :root {
   --usd-color: #7b0005;
   --padding-top: 1rem;
