@@ -18,7 +18,7 @@
 export default {
   computed: {
     items() {
-      if (this.$root.$$frontmatter && this.$root.$frontmatter.features) {
+      if (this.$root.$frontmatter && this.$root.$frontmatter.features) {
         return this.$root.$frontmatter.features.filter((f) => !f.canceled);
       }
       return [];
