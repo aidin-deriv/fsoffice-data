@@ -1,5 +1,5 @@
 <template>
-  <div class="title" v-show="$frontmatter.features.length">
+  <div class="title" v-show="$frontmatter.features">
     <h1>Active items</h1>
   </div>
 </template>

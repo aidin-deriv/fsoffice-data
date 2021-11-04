@@ -1,11 +1,7 @@
 <template>
   <div class="grid-container">
     <div class="container">
-      <div
-        class="feature-item"
-        v-for="(feature, key) in items"
-        :key="key"
-      >
+      <div class="feature-item" v-for="(feature, key) in items" :key="key">
         <img :src="feature.image" :alt="feature.per_month" />
         <div class="action">
           <a :href="feature.link">
@@ -21,11 +17,14 @@
 <script>
 export default {
   computed: {
-    items () {
-      return this.$root.$frontmatter.features.filter(f => f.canceled);
-    }
-  }
-}
+    items() {
+      if (this.$root.$frontmatter && this.$root.$frontmatter.features) {
+        return this.$root.$frontmatter.features.filter((f) => f.canceled);
+      }
+      return [];
+    },
+  },
+};
 </script>
 
 <style lang="css" scoped>
@@ -47,7 +46,7 @@ export default {
 .feature-item {
   max-width: 300px;
   background-color: white;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   box-shadow: 2px 2px 2px rgb(0 0 0 / 10%);
   padding: 1rem;
   margin: 1rem;
@@ -76,7 +75,7 @@ export default {
 .grid-container {
   padding-top: 5rem;
 }
-.feature-item img{
+.feature-item img {
   max-width: 100%;
 }
 </style>

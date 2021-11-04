@@ -1,30 +1,30 @@
 <template>
   <div class="grid-container">
     <div class="container">
-      <div
-          v-for="(feature, key) in items" :key="key" class="feature-item">
-          <img :src="feature.image" :alt="feature.per_month" />
-          <div class="action">
-            <a :href="feature.link">
-              {{ feature.title }} -
-              <strong class="currency">{{ feature.per_month }} USD</strong>
-            </a>
-          </div>
+      <div v-for="(feature, key) in items" :key="key" class="feature-item">
+        <img :src="feature.image" :alt="feature.per_month" />
+        <div class="action">
+          <a :href="feature.link">
+            {{ feature.title }} -
+            <strong class="currency">{{ feature.per_month }} USD</strong>
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
-
 <script>
 export default {
   computed: {
     items() {
-      return this.$root.$frontmatter.features.filter(f => !f.canceled)
-    }
-  }
-}
-
+      if (this.$root.$$frontmatter && this.$root.$frontmatter.features) {
+        return this.$root.$frontmatter.features.filter((f) => !f.canceled);
+      }
+      return [];
+    },
+  },
+};
 </script>
 
 <style lang="css" scoped>
@@ -46,7 +46,7 @@ export default {
 .feature-item {
   max-width: 300px;
   background-color: white;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   box-shadow: 2px 2px 2px rgb(0 0 0 / 10%);
   padding: 1rem;
   margin: 1rem;
@@ -75,7 +75,7 @@ export default {
 .grid-container {
   padding-top: 5rem;
 }
-.feature-item img{
+.feature-item img {
   max-width: 100%;
 }
 </style>
