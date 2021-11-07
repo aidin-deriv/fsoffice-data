@@ -11,8 +11,8 @@ features:
   image: /fsnewoffice/vozara.jpeg
   link: /fsnewoffice/vozara/
   canceled: false
-- title: Lidomall,point 7,Approx 2000 Sq/m2
-  per_month: Need updates from the landloard
+- title: Lidomall,point 8,Approx 2000 Sq/m2
+  per_month: Multiple choices
   image: /fsnewoffice/lidoma.jpeg
   link: /fsnewoffice/lidoma/
   canceled: false 

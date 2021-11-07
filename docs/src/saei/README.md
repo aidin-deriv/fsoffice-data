@@ -13,11 +13,11 @@
 | **Total running cost per month** | N/A                                                                                |
 | **Total running cost per annum** | N/A                                                                                |
 | **Floor number**                    | 3                                                                                  |
-| **Parking**                          | 65                                                                                 |
+| **Parking**                          | 32                                                                                 |
 | **Agent name**                      | Mr. Jalayer                                                                        |
 | **Agent Whatsapp number**          | +9122342149                                                                        |
 | **Agent company**                   | Self-employed                                                                      |
-| **Score**                            | 7                                                                                  |
+| **Score**                            | 6                                                                                  |
 | **Score reason**                    | <br> -Bright offce <br><br/> - Private roof top <br><br/> - Good public transportation <br><br/> - Good price in area |
 |**Comments_about_this_office** |  <br> - Low security <br><br/> - Heavy traffic <br><br/> -Located restricted area <br><br/> -Many pillars <br><br/> - Separated in 3 floors|
 ![An image](./11.jpeg)
