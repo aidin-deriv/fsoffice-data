@@ -16,7 +16,7 @@ features:
   image: /fsnewoffice/lidoma.jpeg
   link: /fsnewoffice/lidoma/
   canceled: false 
-- title: Saei ,point 7, 1480 Sq/m2
+- title: Saei ,point 6, 1480 Sq/m2
   per_month: 20,740
   image: /fsnewoffice/saei.jpeg
   link: /fsnewoffice/saei/
